@@ -1,0 +1,125 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hey there
+    - hello there
+    - hi
+- intent: affirm
+  examples: |
+    - yes thank you
+    - It did, thanks
+    - yes
+- intent: mood_great
+  examples: |
+    - fine
+    - Good thanks
+    - Cool as a cucumber
+    - Nice
+    - fine thanks
+    - fine thank you
+    - very nicely actually, thanks for asking
+    - fine thanks for asking
+    - good good thanks
+- intent: mood_unhappy
+  examples: |
+    - bad
+    - not well
+    - not fine
+    - mind your business
+    - Could be better
+    - could be better actually
+    - could be better, but fine
+- intent: sleep_question_1
+  examples: |
+    - How many hours should we sleep per night?
+    - Is there any minimum hours we need to sleep ?
+    - How much should sleep ?
+    - how many hours should we sleep
+    - time i need to sleep
+    - i was wondering how much time I should sleep
+- intent: sleep_question_2
+  examples: |
+    - Is sleep all the same ?
+    - How many sleep stages there are?
+    - is sleep all equal
+    - mmm, what about sleep patterns, is all sleep the same
+    - is all sleep the same
+- intent: sleep_question_3
+  examples: |
+    - So what are the consequences of not getting enough sleep?
+    - What can happen if I don't get enough sleep?
+    - mmm, what about the effects of not getting enough sleep
+    - What are the consequences of not getting enough sleep
+    - is not sleeping bad
+    - not sleeping has consequences
+- intent: sleep_question_4
+  examples: |
+    - tips improve sleep?
+    - How improve  sleep?
+    - want to sleep better
+    - tips on better sleep
+    - feeling sleepy
+    - i want to sleep better
+    - how can i sleep better
+- intent: sleep_facts
+  examples: |
+    - Tell me something I should know.
+    - In the mood for some information.
+    - Tell me about some interesting sleep science.
+    - Is there any sleep info u can provide
+    - tell me something interesting
+    - I meant if you have more facts to share
+- intent: out-of-scope
+  examples: |
+    - other idioms?
+    - Siri?
+    - AI ?
+    - Where am I?
+    - did you watch the show yesterday
+    - where can i buy something
+    - i wanna go shopping
+    - i want fries
+    - how old are you
+- intent: want_sources
+  examples: |
+    - Where info
+    - What sources?
+- intent: goodbye
+  examples: |
+    - that's all for now
+    - bye
+    - goodbye
+    - bye then
+    - Goodbye then
+- intent: not_eager_to_learn
+  examples: |
+    - no thanks
+    - Not in the mood right now
+    - Not today, no
+    - Actually no
+    - not really
+- intent: thanking
+  examples: |
+    - Thank you
+    - Thanks
+    - thank you
+    - thank you very much
+- intent: need_help
+  examples: |
+    - What can you do?
+    - Help please
+    - help
+    - i need help
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: deny
+  examples: |
+    - no
+    - not really

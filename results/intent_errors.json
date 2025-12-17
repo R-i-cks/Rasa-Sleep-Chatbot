@@ -1,0 +1,10 @@
+[
+  {
+    "text": "not really",
+    "intent": "deny",
+    "intent_prediction": {
+      "name": "not_eager_to_learn",
+      "confidence": 0.7027759552001953
+    }
+  }
+]

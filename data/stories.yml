@@ -1,0 +1,74 @@
+version: "3.1"
+
+stories:
+
+
+- story: happy path 1
+  steps:
+    - intent: mood_great
+    - action: utter_happy
+    - action: utter_question_init
+    - checkpoint: sleep_help
+
+- story: sad path 1
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_question_init
+  - checkpoint: sleep_help
+
+- story: sad path 2
+  steps:
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_dismiss
+  - checkpoint: sleep_help
+
+- story: wants_sleep_help_1
+  steps:
+  - checkpoint: sleep_help
+  - intent: sleep_question_1
+  - action: utter_response_1
+  - action: utter_question
+  - checkpoint: sleep_help
+
+
+
+- story: wants_sleep_help_2
+  steps:
+  - checkpoint: sleep_help
+  - intent: sleep_question_2
+  - action: utter_response_2
+  - action: utter_question
+  - checkpoint: sleep_help
+
+
+- story: wants_sleep_help_3
+  steps:
+  - checkpoint: sleep_help
+  - intent: sleep_question_3
+  - action: utter_response_3
+  - action: utter_question
+  - checkpoint: sleep_help
+
+- story: wants_sleep_help_4
+  steps:
+  - checkpoint: sleep_help
+  - intent: sleep_question_4
+  - action: utter_response_4
+  - action: utter_question
+  - checkpoint: sleep_help
+
+
+- story: does_not_want_sleep_help
+  steps:
+  - checkpoint: sleep_help
+  - intent: not_eager_to_learn
+  - action: utter_dismiss
+
+

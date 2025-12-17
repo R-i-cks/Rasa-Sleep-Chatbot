@@ -1,0 +1,86 @@
+version: '3.1'
+intents:
+- affirm
+- bot_challenge
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- need_help
+- nlu_fallback
+- not_eager_to_learn
+- out-of-scope
+- out_of_scope
+- sleep_facts
+- sleep_question_1
+- sleep_question_2
+- sleep_question_3
+- sleep_question_4
+- thanking
+- want_sources
+responses:
+  utter_greet:
+  - text: Hey! How are you today?
+  - text: Hi! I was wondering when you would show up. How have you been?
+  - text: Hello there! How are you?
+  - text: Hi my sleep padawan! How is the world treating you today?
+  utter_cheer_up:
+  - text: Happiness can be found, even in the darkest of times, if one only remembers to turn on the light. - J.K. Rowling
+  utter_did_that_help:
+  - text: Did i manage to make it better?
+  utter_happy:
+  - text: Great, carry on!
+  utter_question:
+  - text: Feel free to ask anything you want to know.
+  - text: I'll be here if you need to ask more questions
+  utter_question_init:
+  - text: Is there any sleep related question you want to ask me about?
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa. In case you are wondering I can help find more about why sleep is important, and some health issues you may run into if you either don´t get enough or quality sleep.
+  utter_response_1:
+  - text: Great question! As an adult you should sleep for about 7 to 8 hours per night, if you sleep any less than that for an extended period of time be aware you are putting your health at peril.
+  utter_response_2:
+  - text: Sleep is actually a bit complex. Through a night sleep you go through 4 to 6 sleep cycles, which can be divided in light sleep, deep sleep and REM sleep, this last one being the one you get to experience vivid dreaming. Check my sources if you wanna know more!
+  utter_response_3:
+  - text: The consequences of not getting enough sleep can range from mental to physical. From a mental standpoint it will be increasingly difficult to pay attention, making decisions, dealing with emotions, right until depression, suicide and risk-taking behaviour. Lack of sleep can also lead you to microsleep. This also afects your driving skills, as much or more than alcohol, and can make you prone to make more mistakes in your line of work.
+  utter_response_4:
+  - text: There are a couple tips I can give you, like going to bed and waking up at establish hours; Exercising, though not close to bedtime; Avoiding caffeine, nicotine and alcohol; Trying to relax before going to bed; Avoiding screen time before going to bed; Taking your mind off falling asleep, as anxiety can contribute to insomnia, by reading a book for example.
+  utter_sleep_facts:
+  - text: Did you know that your brain actually heals you when you are asleep? It does so by removing toxins that were produced during the day, pretty much like a kidney does. How fascinating is that?
+  - text: Many people 'sleep' on their sleep needs due to thinking they don't need as much! Not getting enough though will make you prone to various health problems, as heart disease and stroke, to demetia and obesity. Sleep is pretty much the elixir of life.
+  utter_sources:
+  - text: 'Sources: [National Institutes of Health: Good Sleep, Good Health](https://newsinhealth.nih.gov/2021/04/good-sleep-good-health), [National Heart, Lung, and Blood Institute: Health Effects of Sleep Deprivation](https://www.nhlbi.nih.gov/health/sleep-deprivation/health-effects), [The George Washington University Hospital] (https://www.gwhospital.com/frequently-asked-questions-about-sleep), [Sleep Foundation] (https://www.sleepfoundation.org/stages-of-sleep) '
+  utter_dismiss:
+  - text: I'm sorry to hear that! I'll be here if there is anything you need.
+  utter_out_of_scope:
+  - text: Unfortunately I am still unable to answer that.
+  utter_welcome:
+  - text: Oh that's nothing, I'm glad I could help
+  - text: You're very welcome
+  - text: No problem!
+  utter_help:
+  - text: I can help you with sleep related questions, like the amount of sleep you need; How to improve your sleep; The different stages of sleep; The problems that might arise from poor sleep hygiene. I can also present you with some facts you might find interesting!
+  utter_please_rephrase:
+  - text: I'm sorry, can you write your question any other way? It can be useful to check my sources if you don't find this answers helpful.
+  - text: I'm sorry, I didn't quite understand that. Can you rephrase your question please? It can be useful to check my sources if you don't find this answers helpful.
+  utter_default:
+  - text: Sorry I didn't get that. Can you rephrase?
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_response_1
+- utter_greet
+- utter_welcome
+- utter_question
+- utter_happy
+- utter_question_init
+- utter_response_3
+- utter_response_4
+- utter_response_2
+- utter_please_rephrase
+- utter_sleep_facts
+- utter_out_of_scope

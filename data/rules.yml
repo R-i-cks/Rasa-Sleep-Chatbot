@@ -1,0 +1,48 @@
+version: "3.1"
+
+rules:
+
+- rule: Say hi everytime the users says hi
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+
+
+- rule: Say goodbye anytime the user says goodbye 
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+
+- rule: Tell the user a sleep related fact
+  steps:
+    - intent: sleep_facts
+    - action: utter_sleep_facts
+
+
+
+- rule: sources
+  steps:
+    - intent: want_sources
+    - action: utter_sources
+
+- rule: you're welcome
+  steps:
+  - intent: thanking
+  - action: utter_welcome
+
+- rule: help
+  steps:
+  - intent: need_help
+  - action: utter_help
+
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
